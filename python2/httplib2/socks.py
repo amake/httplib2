@@ -113,7 +113,7 @@ def wrapmodule(module):
     else:
         raise GeneralProxyError((4, "no proxy specified"))
 
-class socksocket(socket.socket):
+class socksocket(socket.socket().__class__):
     """socksocket([family[, type[, proto]]]) -> socket object
     Open a SOCKS enabled socket. The parameters are the same as
     those of the standard socket init. In order for SOCKS to work,
